@@ -1,5 +1,6 @@
 import fs from "fs";
-const data = JSON.parse(fs.readFileSync("./data.json", "utf-8"));
+import path from "path";
+const data = JSON.parse(fs.readFileSync(path.resolve("data.json"), "utf-8"));
 const users = data.users;
 
 export const getallUsers = (req, res) => {
